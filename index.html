@@ -27,40 +27,21 @@
     </div>
     <section id="catalogos" class="wrap" aria-labelledby="tit-catalogos">
       <h2 id="tit-catalogos">Nossos catálogos</h2>
-      <p class="sub">Selecione uma categoria para acessar seu catálogo em PDF. Os links são ativados assim que os arquivos estiverem publicados.</p>
+      <p class="sub">Selecione uma categoria para abrir o catálogo em PDF.</p>
       <div class="grid">
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20CORDAS.pdf" data-title="Cordas"><h3>Cordas</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HM_AMPS.pdf" data-title="Amplificadores"><h3>Amplificadores</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HM_AUDIO_E_SONORIZA%C3%87%C3%83O.pdf" data-title="Áudio e Sonorização"><h3>Áudio e Sonorização</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HM_SOPROS.pdf" data-title="Sopros"><h3>Sopros</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HOME%20STUDIO.pdf" data-title="Home Studio"><h3>Home Studio</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20TECLAS.pdf" data-title="Teclas"><h3>Teclas</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER_ACESS%C3%93RIOS%20E%20EFEITOS_HM.pdf" data-title="Acessórios e Efeitos"><h3>Acessórios e Efeitos</h3><span class="status">PDF em preparação</span></article>
-        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER_BATERIAS%20E%20PERCUSS%C3%95ES_HM.pdf" data-title="Baterias e Percussões"><h3>Baterias e Percussões</h3><span class="status">PDF em preparação</span></article>
+        <a class="item ready" href="https://drive.google.com/file/d/1_lhGpGlYEWVx5W6C8aGGeCNcs5d8d1ql/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Cordas em PDF"><h3>Cordas</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1ORkfP9AogLIfBCaQA_-OUndZsFNuBOob/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Amplificadores em PDF"><h3>Amplificadores</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1JTySeJ4c8d5yt6eLRTe-nMy4RalIvX7d/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Áudio e Sonorização em PDF"><h3>Áudio e Sonorização</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1vEEZNcE-iXOozzNMECebWbhxHoOg-j-U/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Sopros em PDF"><h3>Sopros</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1JSVQkCKEVNOfO9RFYrKTmXuzkuvaDpSP/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Home Studio em PDF"><h3>Home Studio</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1ogyl3ScGtqdYn1nRJ_ommydoeY3NM6A9/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Teclas em PDF"><h3>Teclas</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1MkQeUl0fhvi__yEkNGbkXLhWl0fFDNP4/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Acessórios e Efeitos em PDF"><h3>Acessórios e Efeitos</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
+        <a class="item ready" href="https://drive.google.com/file/d/1e5OD3L8f-S2G_LkFhe101wyBojZABa0n/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="Abrir catálogo de Baterias e Percussões em PDF"><h3>Baterias e Percussões</h3><span class="status">Abrir catálogo em PDF ↗</span></a>
       </div>
     </section>
     <section class="contact"><div class="wrap contact-inner"><div><h2>Precisa de ajuda para escolher?</h2><p>Converse com nossa equipe de especialistas.</p></div><a class="btn" href="https://wa.me/556232400800" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a></div></section>
   </main>
   <footer class="wrap footer">Harmonia Musical — A Loja dos Artistas.</footer>
 
-  <script>
-    // Only enable a catalog link when its PDF is actually available on this site.
-    document.querySelectorAll('[data-pdf]').forEach(async card => {
-      const filename = card.getAttribute('data-pdf');
-      try {
-        const response = await fetch('./' + filename, {method:'HEAD',cache:'no-store'});
-        if (!response.ok) return;
-        const link = document.createElement('a');
-        link.className = 'item ready';
-        link.href = './' + filename;
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
-        link.setAttribute('aria-label', 'Abrir catálogo de ' + card.getAttribute('data-title') + ' em PDF');
-        link.innerHTML = card.innerHTML;
-        link.querySelector('.status').textContent = 'Abrir catálogo em PDF ↗';
-        card.replaceWith(link);
-      } catch (err) { /* Leave missing PDF as in preparation */ }
-    });
-  </script>
 </body>
 </html>
