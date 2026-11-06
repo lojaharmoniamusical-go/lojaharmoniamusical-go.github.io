@@ -11,7 +11,7 @@
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#3e3420 0,transparent 48%),var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
     .wrap{max-width:1100px;margin:0 auto;padding:0 24px}.top{border-bottom:1px solid #333}.top-inner{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:850;letter-spacing:.035em}.brand span{color:var(--yellow)}.top a{color:var(--text);text-decoration:none;font-size:.9rem}
     .hero{text-align:center;padding:76px 0 64px}.eyebrow{color:var(--yellow);text-transform:uppercase;letter-spacing:.22em;font-weight:750;font-size:.8rem}.hero h1{font-size:clamp(2.5rem,7vw,5.3rem);line-height:1.05;margin:14px auto 18px;max-width:950px;letter-spacing:-.05em}.hero h1 em{color:var(--yellow);font-style:normal}.hero p{color:var(--muted);max-width:650px;margin:0 auto 26px;font-size:1.12rem}.btn{display:inline-block;background:var(--yellow);border-radius:10px;color:#141414;text-decoration:none;padding:14px 24px;font-weight:800}
-    section{padding:16px 0 64px}h2{font-size:1.65rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 25px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.item{border:1px solid var(--border);background:linear-gradient(155deg,#272727,#191919);padding:22px 19px;border-radius:15px;min-height:155px;display:flex;flex-direction:column;justify-content:space-between}.item h3{font-size:1.07rem;margin:0;font-weight:750}.status{display:block;color:#a9a9a9;font-size:.8rem;margin-top:28px}.status:before{content:"●";color:var(--yellow);font-size:.58rem;vertical-align:middle;margin-right:7px}
+    section{padding:16px 0 64px}h2{font-size:1.65rem;margin:0 0 8px}.sub{color:var(--muted);margin:0 0 25px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.item{border:1px solid var(--border);background:linear-gradient(155deg,#272727,#191919);padding:22px 19px;border-radius:15px;min-height:155px;display:flex;flex-direction:column;justify-content:space-between}.item h3{font-size:1.07rem;margin:0;font-weight:750}.item.ready{text-decoration:none;color:var(--text);border-color:#7c6a36;transition:transform .16s,border-color .16s}.item.ready:hover,.item.ready:focus-visible{transform:translateY(-2px);border-color:var(--yellow);outline:none}.item.ready .status{color:var(--yellow)}.status{display:block;color:#a9a9a9;font-size:.8rem;margin-top:28px}.status:before{content:"●";color:var(--yellow);font-size:.58rem;vertical-align:middle;margin-right:7px}
     .contact{border-top:1px solid #333;padding:34px 0 40px}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:24px}.contact p{color:var(--muted);margin:4px 0 0}.footer{padding:20px 0 28px;color:#888;font-size:.85rem;text-align:center}
     @media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:540px){.grid{grid-template-columns:1fr}.top-inner{min-height:66px}.hero{padding:59px 0 50px}.contact-inner{display:block}.contact .btn{margin-top:20px}}
   </style>
@@ -22,25 +22,45 @@
     <div class="wrap hero">
       <div class="eyebrow">Ofertas e campanhas</div>
       <h1>O som das melhores <em>oportunidades.</em></h1>
-      <p>Em breve, os catálogos digitais da Harmonia Musical estarão reunidos aqui. Escolha uma categoria e encontre seus próximos instrumentos e equipamentos.</p>
+      <p>Encontre as ofertas da November Black 2026 em instrumentos musicais e áudio profissional. Escolha sua categoria e confira os catálogos disponíveis.</p>
       <a class="btn" href="#catalogos">Conheça as categorias</a>
     </div>
     <section id="catalogos" class="wrap" aria-labelledby="tit-catalogos">
       <h2 id="tit-catalogos">Nossos catálogos</h2>
-      <p class="sub">Estamos preparando os arquivos em PDF para consulta. As categorias abaixo ainda não possuem links ativos.</p>
+      <p class="sub">Selecione uma categoria para acessar seu catálogo em PDF. Os links são ativados assim que os arquivos estiverem publicados.</p>
       <div class="grid">
-        <article class="item"><h3>Cordas</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Amplificadores</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Áudio e Sonorização</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Sopros</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Home Studio</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Teclas</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Acessórios e Efeitos</h3><span class="status">PDF em preparação</span></article>
-        <article class="item"><h3>Baterias e Percussões</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20CORDAS.pdf" data-title="Cordas"><h3>Cordas</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HM_AMPS.pdf" data-title="Amplificadores"><h3>Amplificadores</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HM_AUDIO_E_SONORIZA%C3%87%C3%83O.pdf" data-title="Áudio e Sonorização"><h3>Áudio e Sonorização</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HM_SOPROS.pdf" data-title="Sopros"><h3>Sopros</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20HOME%20STUDIO.pdf" data-title="Home Studio"><h3>Home Studio</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER%20TECLAS.pdf" data-title="Teclas"><h3>Teclas</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER_ACESS%C3%93RIOS%20E%20EFEITOS_HM.pdf" data-title="Acessórios e Efeitos"><h3>Acessórios e Efeitos</h3><span class="status">PDF em preparação</span></article>
+        <article class="item" data-pdf="OFERTAS%20BLACK%20NOVEMBER_BATERIAS%20E%20PERCUSS%C3%95ES_HM.pdf" data-title="Baterias e Percussões"><h3>Baterias e Percussões</h3><span class="status">PDF em preparação</span></article>
       </div>
     </section>
     <section class="contact"><div class="wrap contact-inner"><div><h2>Precisa de ajuda para escolher?</h2><p>Converse com nossa equipe de especialistas.</p></div><a class="btn" href="https://wa.me/556232400800" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a></div></section>
   </main>
   <footer class="wrap footer">Harmonia Musical — A Loja dos Artistas.</footer>
+
+  <script>
+    // Only enable a catalog link when its PDF is actually available on this site.
+    document.querySelectorAll('[data-pdf]').forEach(async card => {
+      const filename = card.getAttribute('data-pdf');
+      try {
+        const response = await fetch('./' + filename, {method:'HEAD',cache:'no-store'});
+        if (!response.ok) return;
+        const link = document.createElement('a');
+        link.className = 'item ready';
+        link.href = './' + filename;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', 'Abrir catálogo de ' + card.getAttribute('data-title') + ' em PDF');
+        link.innerHTML = card.innerHTML;
+        link.querySelector('.status').textContent = 'Abrir catálogo em PDF ↗';
+        card.replaceWith(link);
+      } catch (err) { /* Leave missing PDF as in preparation */ }
+    });
+  </script>
 </body>
 </html>
